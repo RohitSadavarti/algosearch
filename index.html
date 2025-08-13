@@ -12,7 +12,25 @@
             <div class="title">🌳 Algorithm Visualizer</div>
             <div class="score">Step: <span id="stepCount">0</span></div>
         </div>
-
+            <select class="dropdown" id="algorithmSelect" onchange="updateAlgorithmInfo()">
+                <optgroup label="Tree Traversal">
+                    <option value="preorder">Pre-order Traversal</option>
+                    <option value="inorder">In-order Traversal</option>
+                    <option value="postorder">Post-order Traversal</option>
+                    <option value="bfs">Breadth-First Search (BFS)</option>
+                </optgroup>
+                <optgroup label="Search Algorithms">
+                    <option value="dfs">Depth-First Search (DFS)</option>
+                    <option value="bst">Binary Search Tree Search</option>
+                    <option value="dls">Depth-Limited Search</option>
+                    <option value="iddfs">Iterative Deepening DFS</option>
+                </optgroup>
+                <optgroup label="Informed Search">
+                    <option value="ucs">Uniform Cost Search</option>
+                    <option value="astar">A* Search</option>
+                    <option value="greedy">Greedy Best-First Search</option>
+                </optgroup>
+            </select>
         <div class="controls">
             <div class="tree-config">
                 <div class="config-title">Tree Configuration</div>
@@ -36,25 +54,7 @@
                 </div>
             </div>
 
-            <select class="dropdown" id="algorithmSelect" onchange="updateAlgorithmInfo()">
-                <optgroup label="Tree Traversal">
-                    <option value="preorder">Pre-order Traversal</option>
-                    <option value="inorder">In-order Traversal</option>
-                    <option value="postorder">Post-order Traversal</option>
-                    <option value="bfs">Breadth-First Search (BFS)</option>
-                </optgroup>
-                <optgroup label="Search Algorithms">
-                    <option value="dfs">Depth-First Search (DFS)</option>
-                    <option value="bst">Binary Search Tree Search</option>
-                    <option value="dls">Depth-Limited Search</option>
-                    <option value="iddfs">Iterative Deepening DFS</option>
-                </optgroup>
-                <optgroup label="Informed Search">
-                    <option value="ucs">Uniform Cost Search</option>
-                    <option value="astar">A* Search</option>
-                    <option value="greedy">Greedy Best-First Search</option>
-                </optgroup>
-            </select>
+
 
             <div class="input-container">
                 <input type="text" class="search-input" id="searchValue" placeholder="Enter value to search" maxlength="3">
